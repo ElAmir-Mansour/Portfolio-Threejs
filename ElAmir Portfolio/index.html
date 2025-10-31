@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElAmir Mansour - 3D Portfolio</title>
+    <!-- Import Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Import Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/renderers/CSS3DRenderer.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav id="navbar">
+        <div class="container">
+            <div class="logo">ElAmir Mansour</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="canvas-container" id="hero-canvas"></div>
+        <div id="brain-container"></div>
+        <div class="hero-content">
+            <h1>ElAmir Mansour</h1>
+            <p class="subtitle">Software Engineer & E-Learning Specialist</p>
+            <div class="highlight">
+                🎓 Inspiring 70,000+ learners worldwide with 10+ programming courses
+            </div>
+            <p style="font-size: 18px; margin-top: 20px; opacity: 0.9;">
+                Combining hands-on expertise in Python, Go, and Swift with instructional design to build engaging, technology-driven educational experiences
+            </p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="canvas-container" id="about-canvas"></div>
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">Passionate about simplifying complex software and AI concepts for diverse audiences</p>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a Software Engineer and E-Learning Developer with a B.Sc. in Software Engineering and a proven record of inspiring learners worldwide. My mission is to make technology education accessible and engaging for everyone.
+                    </p>
+                    <p>
+                        Currently pursuing advanced training in Instructional Design at ITI, I combine formal training in instructional design, gamification, and modern authoring tools with practical software development experience to create impactful learning experiences.
+                    </p>
+                    <p>
+                        From designing AI-powered platforms to mentoring aspiring developers, I'm driven by the intersection of technology and education.
+                    </p>
+                </div>
+                
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="70000">0</div>
+                        <div class="stat-label">Students Reached</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="10">0</div>
+                        <div class="stat-label">Courses Created</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="5">0</div>
+                        <div class="stat-label">Countries Mentored</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="20">0</div>
+                        <div class="stat-label">Personal Mentees</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">Core Competencies</h2>
+            <p class="section-subtitle">A blend of technical expertise and educational innovation</p>
+            
+            <div class="skills-3d-container">
+                <div class="skill-cube-wrapper" id="skill-cube-1">
+                    <div class="skill-info">
+                        <h3>Programming</h3>
+                        <p>Python, Go, Swift, Java, C#, JavaScript</p>
+                    </div>
+                    <div class="tooltip">Programming</div>
+                </div>
+                <div class="skill-cube-wrapper" id="skill-cube-2">
+                    <div class="skill-info">
+                        <h3>E-Learning</h3>
+                        <p>ADDIE, Articulate, Game Design, AI in eLearning</p>
+                    </div>
+                    <div class="tooltip">E-Learning</div>
+                </div>
+                <div class="skill-cube-wrapper" id="skill-cube-3">
+                    <div class="skill-info">
+                        <h3>Creative Tools</h3>
+                        <p>Adobe Suite, Illustrator, Photoshop, Premiere</p>
+                    </div>
+                    <div class="tooltip">Creative Tools</div>
+                </div>
+                <div class="skill-cube-wrapper" id="skill-cube-4">
+                    <div class="skill-info">
+                        <h3>Development</h3>
+                        <p>Git, Docker, Kafka, Jira, Agile, Scrum</p>
+                    </div>
+                    <div class="tooltip">Development</div>
+                </div>
+                <div class="skill-cube-wrapper" id="skill-cube-5">
+                    <div class="skill-info">
+                        <h3>Project Management</h3>
+                        <p>Scrum Master, Google PM, Business Analysis</p>
+                    </div>
+                    <div class="tooltip">Project Management</div>
+                </div>
+                <div class="skill-cube-wrapper" id="skill-cube-6">
+                    <div class="skill-info">
+                        <h3>Soft Skills</h3>
+                        <p>Mentorship, Communication, Leadership</p>
+                    </div>
+                    <div class="tooltip">Soft Skills</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">Building solutions that combine technology with user-centric design</p>
+            
+            <div class="projects-grid">
+                <div class="project-card-3d" id="project-card-1">
+                    <div class="project-content">
+                        <h3>Pearl - AI Skincare Platform</h3>
+                        <p class="project-year">2024 • Graduation Project</p>
+                        <p>
+                            Led development of an AI-powered skincare diagnostic platform that learns from user inputs to provide personalized skincare routines.
+                        </p>
+                        <span class="project-badge">🏆 Best Prototype Award</span>
+                        <span class="project-badge">Grade: A+</span>
+                    </div>
+                    <div class="project-details">
+                        <a href="javascript:void(0)" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+
+                <div class="project-card-3d" id="project-card-2">
+                    <div class="project-content">
+                        <h3>The Silk Road</h3>
+                        <p class="project-year">2023</p>
+                        <p>
+                            Designed a gamified application that creates easy-to-follow roadmaps for developers learning new technologies efficiently.
+                        </p>
+                        <span class="project-badge">Gamification</span>
+                        <span class="project-badge">Educational Tech</span>
+                    </div>
+                    <div class="project-details">
+                        <a href="javascript:void(0)" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+
+                <div class="project-card-3d" id="project-card-3">
+                    <div class="project-content">
+                        <h3>Rahal - Tourism Platform</h3>
+                        <p class="project-year">2022 • IEEE Hackathon</p>
+                        <p>
+                            Developed an iOS tourism platform connecting travelers with guides. Implemented a gamified medals system.
+                        </p>
+                        <span class="project-badge">🏅 IEEE Finalist</span>
+                        <span class="project-badge">iOS Development</span>
+                    </div>
+                    <div class="project-details">
+                        <a href="javascript:void(0)" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="canvas-container" id="experience-canvas"></div>
+        <div id="experience-timeline"></div>
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <p class="section-subtitle">Journey through education, mentorship, and software development</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Course Creator & Instructor</h3>
+                    <div class="timeline-date">2020 - Present</div>
+                    <p>
+                        Designed, developed, and published 10+ programming courses on Udemy and YouTube, reaching over 70,000 students worldwide. Created comprehensive content covering HTML to advanced backend systems.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>iOS Track Mentor - CAT Team</h3>
+                    <div class="timeline-date">Mansoura University • Jan 2022 - Aug 2024</div>
+                    <p>
+                        Mentored junior developers in iOS development (Swift), software architecture, and clean code principles. Organized learning sessions and conducted project reviews.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Gamification Developer</h3>
+                    <div class="timeline-date">Saudi Government Project</div>
+                    <p>
+                        Developed a gamified educational application for a Saudi government entity, applying advanced game mechanics to drive learner engagement.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Software Project Leader</h3>
+                    <div class="timeline-date">Various Clients</div>
+                    <p>
+                        Led high-impact software projects leveraging Agile methodologies (Scrum Master certified) to ensure efficient execution and successful delivery.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education" id="education">
+        <div class="canvas-container" id="education-canvas"></div>
+        <div class="container">
+            <h2 class="section-title">Education & Training</h2>
+            <p class="section-subtitle">Building a strong foundation in both technical and educational domains</p>
+            
+            <div class="education-grid">
+                <div class="education-card">
+                    <h3>Pre-Master's in Coursework in Computer Science</h3>
+                    <div class="education-institution">Mansoura University</div>
+                    <div class="education-details">
+                        • Research Focus: Applying Natural Language Processing (NLP) and Machine Learning to detect Depression.
+                    </div>
+                </div>
+
+                <div class="education-card">
+                    <h3>ITI E-Learning Development Track</h3>
+                    <div class="education-institution">Information Technology Institute (ICC)</div>
+                    <div class="education-details">
+                        <strong>Scholarship Program</strong><br><br>
+                        Comprehensive training in Instructional Design (ADDIE), Game Design for Learning, AI in eLearning, Articulate Storyline & Rise, and Adobe Creative Suite.
+                    </div>
+                </div>
+
+                <div class="education-card">
+                    <h3>Bachelor of Science in Computer Science</h3>
+                    <div class="education-institution">Mansoura University • 2024</div>
+                    <div class="education-details">
+                        <strong>Software Engineering Department</strong><br>
+                        Grade: Excellent<br><br>
+                        Graduation Project: Pearl - AI-Powered Skincare Platform (A+, Best Prototype Award)
+                    </div>
+                </div>
+
+                <div class="education-card">
+                    <h3>Professional Certifications</h3>
+                    <div class="education-institution">Multiple Providers</div>
+                    <div class="education-details">
+                        • Google Project Management<br>
+                        • Agile with Atlassian Jira<br>
+                        • ALX Founder Academy<br>
+                        • Java Programming & Software Engineering<br>
+                        • Duolingo English Test - Score 125
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="canvas-container" id="contact-canvas"></div>
+        <div id="contact-form"></div>
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="section-subtitle">Open to collaboration, speaking opportunities, and exciting projects</p>
+            
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/elamir-mansour/" target="_blank" class="social-link">
+                    <span>💼</span> LinkedIn
+                </a>
+                <a href="https://www.udemy.com/user/elamir-mansour/" target="_blank" class="social-link">
+                    <span>🎓</span> Udemy
+                </a>
+                <a href="https://www.youtube.com/@ElAmir" target="_blank" class="social-link">
+                    <span>📺</span> YouTube
+                </a>
+                <a href="mailto:elamirmansour@outlook.com" class="social-link">
+                    <span>📧</span> Email
+                </a>
+            </div>
+
+            <p style="margin-top: 50px; font-size: 18px; opacity: 0.9;">
+                📍 Based , Egypt<br>
+                📞 +0201023737407
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 ElAmir Mansour. All rights reserved.</p>
+            <p style="margin-top: 10px; font-size: 14px;">Empowering learners through technology and education</p>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript Logic -->
+    <script src="js/main.js"></script>
+</body>
+</html>
