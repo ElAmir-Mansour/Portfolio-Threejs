@@ -13,6 +13,10 @@ This is a personal portfolio website built with Three.js, HTML, CSS, and JavaScr
 *   **Contact Section:** 3D contact form.
 *   **Responsive Design:** Optimized for various screen sizes.
 *   **Smooth Scrolling:** Enhanced user experience with smooth navigation.
+<img width="1431" height="763" alt="Screenshot 2025-10-31 at 10 18 22 PM" src="https://github.com/user-attachments/assets/7267a6fb-779d-416c-95cc-85b22391df27" />
+<img width="1435" height="689" alt="Screenshot 2025-10-31 at 10 18 39 PM" src="https://github.com/user-attachments/assets/b70de81f-767a-4f69-a1f6-0a597654fe6d" />
+<img width="1430" height="703" alt="Screenshot 2025-10-31 at 10 18 56 PM" src="https://github.com/user-attachments/assets/86ba5f38-a31b-4fa6-b23b-63a64910eb80" />
+![Uploading Screenshot 2025-10-31 at 10.19.12 PM.png…]()
 
 ## Setup
 
